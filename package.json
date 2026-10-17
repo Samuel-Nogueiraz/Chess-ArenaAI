@@ -1,0 +1,37 @@
+{
+  "name": "jev-chess-arena",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Arena de xadrez para comparar decisões de modelos: demo no navegador, provedores reais no servidor local.",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "packages/core",
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "demo": "node scripts/with-env.mjs VITE_ARENA_MODE=demo -- npm run dev -w web",
+    "start": "npm run start -w server",
+    "build": "npm run build -w web",
+    "build:demo": "node scripts/with-env.mjs VITE_ARENA_MODE=demo -- npm run build -w web",
+    "test": "npm test -w packages/core -w server -w web",
+    "typecheck": "npm run typecheck -w packages/core -w server -w web",
+    "lint": "eslint .",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check": "npm run typecheck && npm run lint && npm test && npm run check:secrets && npm run build:demo"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.5.2",
+    "eslint": "10.13.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
+    "tsx": "4.20.5",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.71.2"
+  }
+}

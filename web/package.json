@@ -1,0 +1,26 @@
+{
+  "name": "@arena/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Interface da JEV Chess Arena: React 19 + Vite, cliente demo no navegador ou HTTP para o servidor local.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@arena/core": "*",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.9.3",
+    "vite": "6.4.4"
+  }
+}

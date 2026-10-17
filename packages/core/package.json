@@ -1,0 +1,17 @@
+{
+  "name": "@arena/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Regras, sessão, custo, análise e provedor demo da JEV Chess Arena. TypeScript puro, roda em Node e no navegador.",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "chess.js": "1.4.0"
+  }
+}

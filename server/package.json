@@ -1,0 +1,20 @@
+{
+  "name": "@arena/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Servidor HTTP local da JEV Chess Arena: sessões, provedores reais e análise com Stockfish.",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@arena/core": "*",
+    "chess.js": "1.4.0",
+    "stockfish": "19.0.0"
+  },
+  "optionalDependencies": {
+    "@cursor/sdk": "1.0.36"
+  }
+}

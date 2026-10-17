@@ -1,0 +1,20 @@
+# dependencias e build
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# segredos e configuracao local (o exemplo e versionado)
+.env
+.env.*
+!.env.example
+arena.config.json
+
+# caches e rascunhos locais
+server/.cache/
+.scratch/
+
+# ruido
+*.log
+.DS_Store
